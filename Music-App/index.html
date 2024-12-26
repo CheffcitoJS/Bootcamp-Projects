@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- Declara el tipo de documento como HTML5 -->
+<html lang="en">
+  <!-- Define el idioma del contenido como inglés -->
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Establece la codificación de caracteres a UTF-8 para soportar caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Configura el ancho de la página para que se adapte a dispositivos móviles -->
+    <title>Lista de Canciones por Género</title>
+    <!-- Título de la página que aparecerá en la pestaña del navegador -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Enlace al archivo de estilos CSS externo -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Enlace a una fuente de Google Fonts -->
+  </head>
+  <body>
+    <h1>Lista de Canciones por Género</h1>
+    <!-- Título principal de la página -->
+
+    <div class="contenedor-generos">
+      <!-- Contenedor principal de todos los géneros musicales -->
+
+      <!-- Sección para el género "Pop" -->
+      <div class="genero" id="pop">
+        <h2>Pop</h2>
+        <!-- Título de la sección "Pop" -->
+        <div class="lista-canciones">
+          <!-- Contenedor de la lista de canciones del género "Pop" -->
+          <!-- Cada enlace representa una canción y ejecuta la función mostrarInfo al hacer clic, pasando el título y la URL de la portada -->
+          <a
+            href="#"
+            onclick="mostrarInfo('Michael Jackson - P.Y.T. (Pretty Young Thing)', 'https://cdn-p.smehost.net/sites/28d35d54a3c64e2b851790a18a1c4c18/wp-content/uploads/2022/09/220919_mj_pyt.jpg')"
+            >Michael Jackson - P.Y.T. (Pretty Young Thing)</a
+          >
+          <a
+            href="#"
+            onclick="mostrarInfo('Mitski - Washing Machine Heart', 'URL_DE_LA_PORTADA')"
+            >Mitski - Washing Machine Heart</a
+          >
+          <a
+            href="#"
+            onclick="mostrarInfo('Ed Sheeran - Shape of You', 'URL_DE_LA_PORTADA')"
+            >Ed Sheeran - Shape of You</a
+          >
+        </div>
+        <br />
+
+        <!-- Sección de comentarios para el género "Pop" -->
+        <div class="comment-section">
+          <h3>Comentarios</h3>
+          <!-- Título de la sección de comentarios -->
+          <!-- Formulario para agregar comentarios, que ejecuta agregarComentario al enviar -->
+          <form onsubmit="agregarComentario(event, 'pop')">
+            <input type="text" name="nombre" placeholder="Tu nombre" required />
+            <!-- Campo para ingresar el nombre del usuario -->
+            <textarea
+              name="comentario"
+              rows="4"
+              placeholder="Escribe tu comentario aquí..."
+              required
+            ></textarea>
+            <!-- Campo de texto para escribir el comentario -->
+            <button type="submit">Enviar</button>
+            <!-- Botón para enviar el comentario -->
+          </form>
+          <ul id="comentarios-pop"></ul>
+          <!-- Lista donde se mostrarán los comentarios para el género "Pop" -->
+        </div>
+      </div>
+
+      <!-- Secciones similares para los géneros "Rock" e "Indie", con las mismas estructuras y funcionalidades -->
+      <div class="genero" id="rock">
+        <h2>Rock</h2>
+        <div class="lista-canciones">
+          <a
+            href="#"
+            onclick="mostrarInfo('The Beatles - Abbey Road', 'URL_DE_LA_PORTADA')"
+            >The Beatles - Abbey Road</a
+          >
+          <a
+            href="#"
+            onclick="mostrarInfo('Queen - Bohemian Rhapsody', 'https://e-cdns-images.dzcdn.net/images/cover/8b8fc5d117f9357b79f0a0a410a170e8/500x500-000000-80-0-0.jpg<')"
+            >Queen - Bohemian Rhapsody</a
+          >
+          <a
+            href="#"
+            onclick="mostrarInfo('Led Zeppelin - Stairway to Heaven', 'URL_DE_LA_PORTADA')"
+            >Led Zeppelin - Stairway to Heaven</a
+          >
+        </div>
+        <br /><br />
+        <div class="comment-section">
+          <h3>Comentarios</h3>
+          <form onsubmit="agregarComentario(event, 'rock')">
+            <input type="text" name="nombre" placeholder="Tu nombre" required />
+            <textarea
+              name="comentario"
+              rows="4"
+              placeholder="Escribe tu comentario aquí..."
+              required
+            ></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+          <ul id="comentarios-rock"></ul>
+        </div>
+      </div>
+
+      <div class="genero" id="indie">
+        <h2>Indie</h2>
+        <div class="lista-canciones">
+          <a
+            href="#"
+            onclick="mostrarInfo('Phoebe Bridgers - Not A Lot, Just Forever', 'URL_DE_LA_PORTADA')"
+            >Phoebe Bridgers - Not A Lot, Just Forever</a
+          >
+          <a
+            href="#"
+            onclick="mostrarInfo('Mac DeMarco - My Kind of Woman', 'URL_DE_LA_PORTADA')"
+            >Mac DeMarco - My Kind of Woman</a
+          >
+          <a
+            href="#"
+            onclick="mostrarInfo('Tame Impala - The Less I Know The Better', 'URL_DE_LA_PORTADA')"
+            >Tame Impala - The Less I Know The Better</a
+          >
+        </div>
+        <div class="comment-section">
+          <h3>Comentarios</h3>
+          <form onsubmit="agregarComentario(event, 'indie')">
+            <input type="text" name="nombre" placeholder="Tu nombre" required />
+            <textarea
+              name="comentario"
+              rows="4"
+              placeholder="Escribe tu comentario aquí..."
+              required
+            ></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+          <ul id="comentarios-indie"></ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contenedor para mostrar la imagen de la portada y descripción de la canción seleccionada -->
+    <div class="contenedor-imagen" id="contenedor-imagen" style="display: none">
+      <a href="#" id="link-portada" target="_blank">
+        <img id="imagen-portada" src="" alt="portada" />
+        <!-- Imagen de la portada de la canción seleccionada -->
+      </a>
+      <p id="descripcion-tema"></p>
+      <!-- Texto de la descripción de la canción -->
+    </div>
+
+    <!-- Sección para la puntuación del tema seleccionado -->
+    <div class="puntuacion" id="puntuacion" style="display: none">
+      <h3>Puntuación del Tema</h3>
+      <div class="barra-puntuacion">
+        <div class="barra-progreso" id="barra-progreso"></div>
+        <!-- Barra que muestra la puntuación visualmente -->
+      </div>
+      <!-- Botones para calificar la canción con diferentes puntuaciones -->
+      <div class="rating-buttons">
+        <button onclick="setRating(20)">⭐</button>
+        <button onclick="setRating(40)">⭐⭐</button>
+        <button onclick="setRating(60)">⭐⭐⭐</button>
+        <button onclick="setRating(80)">⭐⭐⭐⭐</button>
+        <button onclick="setRating(100)">⭐⭐⭐⭐⭐</button>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

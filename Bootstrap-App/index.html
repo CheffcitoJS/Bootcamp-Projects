@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos y configuración del documento -->
+    <meta charset="UTF-8"> <!-- Configura la codificación de caracteres a UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Asegura un diseño responsive -->
+    <title>Portafolio</title> <!-- Define el título de la página web -->
+
+    <!-- Incluir CSS de Bootstrap desde un CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS personalizado para estilos adicionales -->
+    <style>
+        body {
+            background-color: #f8f9fa; /* Fondo gris claro para el cuerpo */
+            font-family: 'Arial', sans-serif; /* Define la fuente de la página */
+        }
+        .navbar-brand {
+            font-weight: bold; /* Hace que el nombre de la marca sea en negrita */
+        }
+        .hero {
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Fondo degradado para la sección hero */
+            color: white; /* Texto en color blanco */
+            padding: 100px 20px; /* Añade espacio alrededor del contenido */
+            text-align: center; /* Centra el texto horizontalmente */
+        }
+        .project-card {
+            transition: transform 0.3s; /* Añade una animación suave para el efecto hover */
+        }
+        .project-card:hover {
+            transform: translateY(-10px); /* Eleva ligeramente la tarjeta al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+    <!-- Sección de barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Mi Portafolio</a> <!-- Logo o nombre de la marca -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
+                <span class="navbar-toggler-icon"></span> <!-- Ícono para el menú en móviles -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto"> <!-- Enlaces de navegación alineados a la derecha -->
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero para introducción -->
+    <section class="hero">
+        <div class="container">
+            <h1>Bienvenido a mi Portafolio</h1> <!-- Título principal -->
+            <p class="lead">Mostrando mis proyectos y habilidades</p> <!-- Subtítulo o lema -->
+        </div>
+    </section>
+
+    <!-- Sección Sobre mí para introducir al usuario -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Sobre mí</h2> <!-- Título de la sección -->
+                    <p>¡Hola! Soy un desarrollador apasionado por crear aplicaciones web y explorar nuevas tecnologías. Este portafolio muestra algunos de mis proyectos favoritos.</p> <!-- Introducción personal -->
+                </div>
+                <div class="col-md-6">
+                    <img src="https://via.placeholder.com/500" alt="Sobre mí" class="img-fluid rounded"> <!-- Imagen de ejemplo con estilo -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Proyectos para mostrar trabajos -->
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Proyectos</h2> <!-- Título de la sección -->
+            <div class="row">
+                <!-- Tarjeta de proyecto 1 -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="https://via.placeholder.com/350" class="card-img-top" alt="Proyecto 1"> <!-- Imagen del proyecto -->
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 1</h5> <!-- Título del proyecto -->
+                            <p class="card-text">Una breve descripción del proyecto.</p> <!-- Breve descripción -->
+                            <a href="#" class="btn btn-primary">Ver Proyecto</a> <!-- Botón que enlaza al proyecto -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta de proyecto 2 -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="https://via.placeholder.com/350" class="card-img-top" alt="Proyecto 2"> <!-- Imagen del proyecto -->
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 2</h5> <!-- Título del proyecto -->
+                            <p class="card-text">Una breve descripción del proyecto.</p> <!-- Breve descripción -->
+                            <a href="#" class="btn btn-primary">Ver Proyecto</a> <!-- Botón que enlaza al proyecto -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta de proyecto 3 -->
+                <div class="col-md-4">
+                    <div class="card project-card">
+                        <img src="https://via.placeholder.com/350" class="card-img-top" alt="Proyecto 3"> <!-- Imagen del proyecto -->
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 3</h5> <!-- Título del proyecto -->
+                            <p class="card-text">Una breve descripción del proyecto.</p> <!-- Breve descripción -->
+                            <a href="#" class="btn btn-primary">Ver Proyecto</a> <!-- Botón que enlaza al proyecto -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto con un formulario -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contáctame</h2> <!-- Título de la sección -->
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nombre</label> <!-- Etiqueta para el campo de nombre -->
+                    <input type="text" class="form-control" id="name" placeholder="Tu Nombre"> <!-- Campo de entrada para nombre -->
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label> <!-- Etiqueta para el campo de email -->
+                    <input type="email" class="form-control" id="email" placeholder="Tu Correo Electrónico"> <!-- Campo de entrada para email -->
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mensaje</label> <!-- Etiqueta para el campo de mensaje -->
+                    <textarea class="form-control" id="message" rows="4" placeholder="Tu Mensaje"></textarea> <!-- Área de texto para el mensaje -->
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button> <!-- Botón de envío -->
+            </form>
+        </div>
+    </section>
+
+    <!-- Incluir JavaScript de Bootstrap desde un CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

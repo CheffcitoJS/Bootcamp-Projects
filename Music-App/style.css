@@ -1,0 +1,189 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Fuente de Google Fonts */
+    background-color: #1b1b1b; /* Fondo oscuro para el cuerpo de la página */
+    color: #ffffff; /* Texto en color blanco */
+    margin: 0; /* Elimina márgenes alrededor del body */
+    padding: 20px;
+}
+
+h1 {
+    text-align: center; /* Centra el título */
+    color: #ffffff; /* Color más claro para el título */
+    margin-bottom: 40px; /* Espacio inferior */
+}
+
+/* Flexbox: Contenedor principal que agrupa las secciones de géneros */
+.contenedor-generos {
+    display: flex; /* Flexbox para organizar los géneros en línea */
+    flex-wrap: wrap; /* Permite que los elementos se "envuelvan" si no caben en una sola fila */
+    gap: 20px; /* Espacio entre los géneros */
+    justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+/* Estilos generales para cada género */
+.genero {
+    background-color: #333; /* Color de fondo oscuro para los géneros */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 20px; /* Bordes redondeados */
+    width: 300px; /* Ancho fijo */
+    transition: transform 0.3s; /* Transición para el efecto hover */
+}
+
+/* Efecto hover: Mueve ligeramente hacia arriba cuando se pasa el ratón */
+.genero:hover {
+    transform: translateY(-10px); /* Desplazamiento hacia arriba */
+}
+
+.genero h2 {
+    text-transform: uppercase; /* Texto en mayúsculas */
+    margin-bottom: 10px; /* Espacio inferior */
+    color: #ffffff; /* Texto en color blanco */
+    text-align: center; /* Centrado */
+}
+
+.lista-canciones {
+    display: grid; /* Grid layout */
+    grid-template-columns: 1fr; /* Una columna que ocupa todo el ancho */
+    row-gap: 10px; /* Espacio entre las filas */
+}
+
+.genero a {
+    text-decoration: none; /* Sin subrayado en los enlaces */
+    color: #ffffff; /* Color blanco para los enlaces */
+    font-weight: 300; /* Fuente ligera */
+    transition: color 0.3s; /* Transición para el cambio de color */
+}
+
+.genero a:hover {
+    color: #332a2d; /* Color rosado brillante al pasar el ratón */
+}
+
+/* Colores de fondo específicos para cada género musical */
+#pop {
+    background-color: #7db3ab;
+}
+
+#rock {
+    background-color: #9c4c4c;
+}
+
+#indie {
+    background-color: #3f4075;
+}
+
+.contenedor-imagen {
+    display: flex; /* Flex layout para centrar la imagen y el texto */
+    align-items: center; /* Alinea el contenido verticalmente */
+}
+
+.contenedor-imagen img {
+    width: 400px; /* Ancho fijo de la imagen */
+    margin-top: 20px; /* Margen superior */
+    border-radius: 20px; /* Bordes redondeados */
+    transition: transform 0.3s; /* Transición para efecto hover */
+}
+
+.contenedor-imagen img:hover {
+    transform: translateY(-5px); /* Desplazamiento hacia arriba al pasar el ratón */
+}
+
+.contenedor-imagen p {
+    width: 500px; /* Ancho fijo para el texto */
+    margin-left: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.comment-section {
+    margin-top: 20px; /* Espacio superior */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Centra el texto dentro del formulario */
+}
+
+.comment-section h3 {
+    color: #ffffff;
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+.comment-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%; /* Ajusta el ancho del formulario */
+    max-width: 250px; /* Máximo ancho del formulario */
+}
+
+.comment-section input,
+.comment-section textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    border: none; /* Sin borde */
+    outline: none;
+    box-sizing: border-box; /* Ajusta el tamaño de forma consistente */
+}
+
+.comment-section button {
+    background-color: #666; /* Fondo gris oscuro */
+    color: #fff;
+    padding: 10px;
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a mano */
+    transition: background-color 0.3s; /* Transición de fondo */
+}
+
+.comment-section button:hover {
+    background-color: #444; /* Fondo más oscuro al pasar el ratón */
+}
+
+.lista-canciones a:hover {
+    color: #ffcc00; /* Cambia el color al pasar el cursor */
+    font-weight: bold; /* Hace el texto más destacado */
+    text-decoration: underline; /* Añade subrayado */
+}
+
+.puntuacion {
+    margin-top: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.barra-puntuacion {
+    background-color: #a73535; /* Fondo de la barra */
+    width: 100%; /* Ancho completo */
+    height: 20px; /* Altura de la barra */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 10px;
+    overflow: hidden; /* Ocultar desbordamientos */
+}
+
+.barra-progreso {
+    background-color: #ffcc00; /* Color de la barra de progreso */
+    width: 70%; /* Ancho de la barra de progreso, simulando una puntuación de 70% */
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s; /* Transición suave para animaciones futuras */
+}
+
+.rating-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 10px;
+}
+
+.rating-buttons button {
+    background-color: #444; /* Fondo gris oscuro */
+    color: #ffcc00; /* Color amarillo */
+    border: none; /* Sin borde */
+    padding: 5px 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición para el fondo */
+}
+
+.rating-buttons button:hover {
+    background-color: #333; /* Fondo más oscuro al pasar el ratón */
+}
